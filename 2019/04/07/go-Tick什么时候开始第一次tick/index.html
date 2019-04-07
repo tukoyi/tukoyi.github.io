@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Go,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tukoyi&#39;s blog">
-<meta property="og:url" content="tukoyi.github.io/index.html">
+<meta name="description" content="ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试123456789101112131415161718192021package mainimport (    &amp;quot;fmt&amp;quot;    &amp;quot;time&amp;quot;)func main() &amp;#123;	ticker := time.NewTicker(time.Duration(1) * t">
+<meta name="keywords" content="Go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="go Tick什么时候开始第一次tick">
+<meta property="og:url" content="tukoyi.github.io/2019/04/07/go-Tick什么时候开始第一次tick/index.html">
 <meta property="og:site_name" content="tukoyi&#39;s blog">
+<meta property="og:description" content="ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试123456789101112131415161718192021package mainimport (    &amp;quot;fmt&amp;quot;    &amp;quot;time&amp;quot;)func main() &amp;#123;	ticker := time.NewTicker(time.Duration(1) * t">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-07T13:28:13.779Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tukoyi&#39;s blog">
+<meta name="twitter:title" content="go Tick什么时候开始第一次tick">
+<meta name="twitter:description" content="ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试123456789101112131415161718192021package mainimport (    &amp;quot;fmt&amp;quot;    &amp;quot;time&amp;quot;)func main() &amp;#123;	ticker := time.NewTicker(time.Duration(1) * t">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="tukoyi.github.io/">
+  <link rel="canonical" href="tukoyi.github.io/2019/04/07/go-Tick什么时候开始第一次tick/">
 
 
 
 
 
-  <title>tukoyi's blog</title>
+  <title>go Tick什么时候开始第一次tick | tukoyi's blog</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -234,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/07/go-Tick什么时候开始第一次tick/" itemprop="url">go Tick什么时候开始第一次tick</a></h1>
+          <h1 class="post-title" itemprop="name headline">go Tick什么时候开始第一次tick</h1>
         
 
         <div class="post-meta">
@@ -318,14 +320,10 @@
       
 
       
-        
-          
-            <p>ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">    &quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	ticker := time.NewTicker(time.Duration(1) * time.Second)</span><br><span class="line">	j := 0</span><br><span class="line">	defer ticker.Stop()</span><br><span class="line"></span><br><span class="line">	fmt.Println(j, time.Now())</span><br><span class="line">	for tm := range ticker.C&#123;</span><br><span class="line">		j ++</span><br><span class="line">		fmt.Println(j, tm)</span><br><span class="line">		if j &gt;= 10 &#123;</span><br><span class="line">			break</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">    &quot;time&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	ticker := time.NewTicker(time.Duration(1) * time.Second)</span><br><span class="line">	j := 0</span><br><span class="line">	defer ticker.Stop()</span><br><span class="line"></span><br><span class="line">	fmt.Println(j, time.Now())</span><br><span class="line">	for tm := range ticker.C&#123;</span><br><span class="line">		j ++</span><br><span class="line">		fmt.Println(j, tm)</span><br><span class="line">		if j &gt;= 10 &#123;</span><br><span class="line">			break</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>输出如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">0 2019-04-07 21:10:29.1018538 +0800 CST m=+0.006997901</span><br><span class="line">1 2019-04-07 21:10:30.1015869 +0800 CST m=+1.006731001</span><br><span class="line">2 2019-04-07 21:10:31.1028936 +0800 CST m=+2.008037701</span><br><span class="line">3 2019-04-07 21:10:32.1046246 +0800 CST m=+3.009768701</span><br><span class="line">4 2019-04-07 21:10:33.1154541 +0800 CST m=+4.020598201</span><br><span class="line">5 2019-04-07 21:10:34.1012874 +0800 CST m=+5.006431501</span><br><span class="line">6 2019-04-07 21:10:35.1031226 +0800 CST m=+6.008266701</span><br><span class="line">7 2019-04-07 21:10:36.104569 +0800 CST m=+7.009713101</span><br><span class="line">8 2019-04-07 21:10:37.1064066 +0800 CST m=+8.011550701</span><br><span class="line">9 2019-04-07 21:10:38.1094041 +0800 CST m=+9.014548201</span><br><span class="line">10 2019-04-07 21:10:39.1118504 +0800 CST m=+10.016994501</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure></p>
 <p>可以看到在j = 0和j = 1 期间耗时了1s，也就是一个tick 的duration之后才会产生第一个tick。如果设置10s超时，则应该设置条件为j &gt;= 10跳出循环。如果j &gt; 10,实际上超时时间是11s。<br>从源码中可以看到，下一个tick产生的时间由when()决定<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">func NewTicker(d Duration) *Ticker &#123;</span><br><span class="line">	if d &lt;= 0 &#123;</span><br><span class="line">		panic(errors.New(&quot;non-positive interval for NewTicker&quot;))</span><br><span class="line">	&#125;</span><br><span class="line">	// Give the channel a 1-element time buffer.</span><br><span class="line">	// If the client falls behind while reading, we drop ticks</span><br><span class="line">	// on the floor until the client catches up.</span><br><span class="line">	c := make(chan Time, 1)</span><br><span class="line">	t := &amp;Ticker&#123;</span><br><span class="line">		C: c,</span><br><span class="line">		r: runtimeTimer&#123;</span><br><span class="line">			when:   when(d),</span><br><span class="line">			period: int64(d),</span><br><span class="line">			f:      sendTime,</span><br><span class="line">			arg:    c,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;</span><br><span class="line">	startTimer(&amp;t.r)</span><br><span class="line">	return t</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
     
@@ -340,269 +338,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="tukoyi.github.io/2018/12/30/没有清晰的目标问题就会永远存在/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tukoyi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="tukoyi's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/30/没有清晰的目标问题就会永远存在/" itemprop="url">没有清晰的目标问题就会永远存在</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-30T00:10:44+08:00">
-                2018-12-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Go/" rel="tag"># Go</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>又到了一年年底盘点的时候，看看你年初时立的Flag，是不是一个也没实现？回想学生时代，你是不是也有过寒暑假带一大袋书回家，然而一本也没看的经历？我从来没把带回家的书看完过。<br>  <img src="https://leanote.com/api/file/getImage?fileId=5c27368fab64413ead0016a6" alt="title"><br>  看到这张图，我笑了，这不就是每年制定计划，从没完成过的我们大多数人吗？<br>今天看到一篇文章，讲厉害的人是如何分析问题的，文中提到了制定目标的SMART原则。</p>
-<ul>
-<li>Specific 目标要明确、具体<br>举个例子，比如你在新年伊始制定了“我要获得幸福”这个目标，但是幸福定义到底是什么？不知道，“幸福”这两个字无法明确定义，目标是什么都不知道，自然也无法实现。就像你说要去蓬莱岛，蓬莱岛在哪里有多远都不知道，又如何能到呢？</li>
-<li>Measurable 可衡量<br>需要有数据维度的量化，比如Leetcode medium及以下的题目，全部complete。让客户满意这个目标，可以量化为“好评率95%”</li>
-<li>Achievable 自力可达到<br>比如下半年能升职这个目标，除了个人努力之外，还存在其他不可控制的因素的寄托，可以调整成把下半年业绩做到团队第一。</li>
-<li>Rewarding 满足感<br>太容易达成的目标你也不会想做。</li>
-<li>Time-bound 时间限制<br>没有时间限制，任何目标都没有意义。你要在深圳买一套房，准备多久达到呢？两年？五年？还是一辈子？</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="tukoyi.github.io/2018/12/29/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tukoyi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="tukoyi's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/29/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-29T22:47:38+08:00">
-                2018-12-29
-              </time>
+              <a href="/2018/12/30/没有清晰的目标问题就会永远存在/" rel="next" title="没有清晰的目标问题就会永远存在">
+                <i class="fa fa-chevron-left"></i> 没有清晰的目标问题就会永远存在
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -612,10 +377,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -623,6 +389,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -841,6 +611,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
