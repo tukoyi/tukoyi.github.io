@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>read on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/read/</link>
+    <link>tukoyi.github.io/tags/read/</link>
     <description>Recent content in read on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Dec 2018 00:10:44 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/read/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Dec 2018 00:10:44 +0000</lastBuildDate><atom:link href="tukoyi.github.io/tags/read/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>没有清晰的目标问题就会永远存在</title>
-      <link>http://localhost:1313/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</link>
+      <link>tukoyi.github.io/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</link>
       <pubDate>Sun, 30 Dec 2018 00:10:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</guid>
+      <guid>tukoyi.github.io/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</guid>
       <description>又到了一年年底盘点的时候，看看你年初时立的Flag，是不是一个也没实现？回想学生时代，你是不是也有过寒暑假带一大袋书回家，然而一本也没看的经</description>
     </item>
     

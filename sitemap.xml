@@ -1,57 +1,57 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="tukoyi.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>tukoyi.github.io/</loc>
     <lastmod>2019-04-07T21:02:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/go/</loc>
+    <loc>tukoyi.github.io/tags/go/</loc>
     <lastmod>2019-04-07T21:02:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</loc>
+    <loc>tukoyi.github.io/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</loc>
     <lastmod>2019-04-07T21:02:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>tukoyi.github.io/post/</loc>
     <lastmod>2019-04-07T21:02:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>tukoyi.github.io/tags/</loc>
     <lastmod>2019-04-07T21:02:56+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/read/</loc>
+    <loc>tukoyi.github.io/tags/read/</loc>
     <lastmod>2018-12-30T00:10:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</loc>
+    <loc>tukoyi.github.io/post/%E6%B2%A1%E6%9C%89%E6%B8%85%E6%99%B0%E7%9A%84%E7%9B%AE%E6%A0%87%E9%97%AE%E9%A2%98%E5%B0%B1%E4%BC%9A%E6%B0%B8%E8%BF%9C%E5%AD%98%E5%9C%A8/</loc>
     <lastmod>2018-12-30T00:10:44+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>tukoyi.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
