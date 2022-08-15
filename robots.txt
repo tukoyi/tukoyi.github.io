@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: tukoyi.github.io/sitemap.xml
+Sitemap: https://tukoyi.github.io/sitemap.xml

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Even - A super concise theme for Hugo</title>
-    <link>tukoyi.github.io/tags/go/</link>
+    <link>https://tukoyi.github.io/tags/go/</link>
     <description>Recent content in Go on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Apr 2019 21:02:56 +0000</lastBuildDate><atom:link href="tukoyi.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Apr 2019 21:02:56 +0000</lastBuildDate><atom:link href="https://tukoyi.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go Tick什么时候开始第一次tick</title>
-      <link>tukoyi.github.io/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</link>
+      <link>https://tukoyi.github.io/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</link>
       <pubDate>Sun, 07 Apr 2019 21:02:56 +0000</pubDate>
       
-      <guid>tukoyi.github.io/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</guid>
+      <guid>https://tukoyi.github.io/post/go-tick%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E6%AC%A1tick/</guid>
       <description>ticker的第一次tick是立即运行呢，还是等待一定时间后运行呢？运行下面的代码测试 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34;</description>
     </item>
     
