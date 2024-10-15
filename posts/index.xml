@@ -11,7 +11,58 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 19:06:56 +0800</lastBuildDate>
     <atom:link href="https://tukoyi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx限流插件原理</title>
+      <link>https://tukoyi.github.io/posts/nginx%E9%99%90%E6%B5%81%E6%8F%92%E4%BB%B6%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 15 Oct 2024 19:06:56 +0800</pubDate>
+      <guid>https://tukoyi.github.io/posts/nginx%E9%99%90%E6%B5%81%E6%8F%92%E4%BB%B6%E5%8E%9F%E7%90%86/</guid>
+      <description>&lt;h1 id=&#34;一背景&#34;&gt;一、背景&lt;/h1&gt;
+&lt;p&gt;2024年9月，活动平台安全答题活动过程中，有大量的请求访问，超过了业务系统处理能力。在通过nginx对请求进行限流的过程中，nginx疑似未达到设置的200 QPS，就已经拒绝了请求，本文对该问题进行分析。&lt;/p&gt;
+&lt;h1 id=&#34;二限流插件介绍&#34;&gt;二、限流插件介绍&lt;/h1&gt;
+&lt;p&gt;配置示例&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;http {
+    # 定义限速规则
+    # $binary_remote_addr：按照IP进行限速
+    # zone=one:10m：分配一块内存区域，名称叫one，大小10m，用这块内存中统计每个IP的QPS
+    # rate=1r/s：限速每秒一次请求
+    limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
+
+    ...
+
+    server {
+
+        ...
+
+        location /search/ {
+            # 对/search/这个url应用限速
+            # zone=one：使用zone=one这块内存区域，统计各个IP的请求次数
+            # burst=5：触发限速时允许5个突发流量
+            limit_req zone=one burst=5 nodelay;
+        }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;更详细的设置可以参考参考资料3《Nginx模块 ngx_http_limit_req_modules官方文档》&lt;/p&gt;
+&lt;h1 id=&#34;三问题复现&#34;&gt;三、问题复现&lt;/h1&gt;
+&lt;p&gt;检查限速插件各个参数的说明，达不到指定的QPS怀疑burst参数设置问题，在活动平台的场景中，没有设置burst参数，官方文档对这个参数的描述是“允许突发请求的大小”，语焉不详，对这个参数进行实际测试。用jmeter发起100QPS的请求进行压测。Nginx设置限速40r/s，比较不设置burst参数和设置burst参数的限流情况。
+&lt;strong&gt;场景一 不设置burst&lt;/strong&gt;
+不设置默认burst=0
+限速配置：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; ...
+ limit_req_zone limit zone=one:10m rate=40r/s;
+    ... 
+    limit_req zone=one;
+    ... 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
+![[pics/Pasted image 20241009161422.png]]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二 设置burst=5&lt;/strong&gt;
+限速配置：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; ...
+ limit_req_zone limit zone=one:10m rate=40r/s;
+    ... 
+    limit_req zone=one burst=5;
+    ... 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
+![[Pasted image 20241009161111.png]]&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
