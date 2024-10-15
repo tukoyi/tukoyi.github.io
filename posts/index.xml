@@ -11,16 +11,8 @@
     </image>
     <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Oct 2024 20:57:39 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2024 19:06:56 +0800</lastBuildDate>
     <atom:link href="https://tukoyi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://tukoyi.github.io/posts/my-first-post/</link>
-      <pubDate>Tue, 15 Oct 2024 20:57:39 +0800</pubDate>
-      <guid>https://tukoyi.github.io/posts/my-first-post/</guid>
-      <description>&lt;h1 id=&#34;test&#34;&gt;test&lt;/h1&gt;
-&lt;h2 id=&#34;ohooooo&#34;&gt;ohooooo&lt;/h2&gt;</description>
-    </item>
     <item>
       <title>Nginx限流插件原理</title>
       <link>https://tukoyi.github.io/posts/nginx%E9%99%90%E6%B5%81%E6%8F%92%E4%BB%B6%E5%8E%9F%E7%90%86/</link>
@@ -61,7 +53,8 @@
     limit_req zone=one;
     ... 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
-![[pics/Pasted image 20241009161422.png]]&lt;/p&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate1.png&#34; alt=&#34;限流1&#34;  /&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;场景二 设置burst=5&lt;/strong&gt;
 限速配置：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; ...
@@ -70,7 +63,8 @@
     limit_req zone=one burst=5;
     ... 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
-![[Pasted image 20241009161111.png]]&lt;/p&gt;</description>
+&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate2.png&#34; alt=&#34;限流2&#34;  /&gt;
+&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
