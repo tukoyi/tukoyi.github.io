@@ -1,2 +1,3 @@
 User-agent: *
-Sitemap: http://tukoyi.github.io/sitemap.xml
+Disallow:
+Sitemap: http://localhost:1313/sitemap.xml
