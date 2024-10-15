@@ -53,7 +53,7 @@
     limit_req zone=one;
     ... 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
-&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate1.png&#34; alt=&#34;限流1&#34;  /&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate1.png&#34; alt=&#34;pic&#34;  /&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;场景二 设置burst=5&lt;/strong&gt;
 限速配置：&lt;/p&gt;
@@ -63,22 +63,8 @@
     limit_req zone=one burst=5;
     ... 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;压测结果：
-&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate2.png&#34; alt=&#34;限流2&#34;  /&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;pics/limit-rate2.png&#34; alt=&#34;pic&#34;  /&gt;
 &lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://tukoyi.github.io/pics/image/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tukoyi.github.io/pics/image/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://tukoyi.github.io/pics/pasted/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://tukoyi.github.io/pics/pasted/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
